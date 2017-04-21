@@ -4,10 +4,10 @@
     	<p>你需要具备以下知识</p>
     	<div>
     	<ul>
-        <li v-for = "skill in skills">{{skill}}</li>
+        <li v-for = "skill in skills">{{skill}}<span id="dele">删除</span></li>
       </ul>
       <span id="inIt">
-        <input type="text" placeholder="还需要具备：" :value = "beforeVal"/><button @click = "updata">提交</button>
+        <input type="search" placeholder="还需要具备：" v-model = "beforeVal"/><button @click = "updata">提交</button>
       </span>
     	</div>
     </div>
@@ -63,6 +63,8 @@ export default {
   list-style: none;
   font-size:16px;
   padding:5px 0;
+  display: flex;
+  justify-content: space-between;
 }
 #inIt{
   display: flex;
