@@ -37,5 +37,6 @@ export default {
   top:60px;
   width: 90%;
   background: rgba(255,255,255,0.3);
+  overflow: auto;
 }
 </style>
