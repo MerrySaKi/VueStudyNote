@@ -1,5 +1,6 @@
 <template>
   <div class="">
+    学习视频
   </div>  
 </template>
 

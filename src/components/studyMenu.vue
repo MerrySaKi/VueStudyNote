@@ -1,7 +1,11 @@
 <template>
   <div class="aside">
     <ul>
-      <li v-for="item in items">{{item}}</li>
+      <li><router-link :to="{path:'/studybefore'}">学习前提</router-link></li>
+      <li><router-link :to="{path:'studyprogress'}">学习进度</router-link></li>
+      <li><router-link :to="{path:'studybook'}">学习资料</router-link></li>
+      <li><router-link :to="{path:'studuvideo'}">实战练习</router-link></li>
+      <li><router-link :to="{path:'studymore'}">更多</router-link></li>
     </ul>
   </div>
 </template>
@@ -10,13 +14,6 @@
 export default {
   data () {
     return {
-      items: [
-        '学习前提',
-        '学习进度',
-        '学习资料',
-        '实战练习',
-        '更多'
-      ]
     }
   }
 }
@@ -36,9 +33,13 @@ export default {
   }
   .aside ul li{
     list-style: none;
-    color:#fff;
-    padding:10px;
     font-weight: 300;
+  }
+  .aside ul li a{
+     color:#fff; 
+     padding:10px;
+     display: block;
+     text-decoration: none;
   }
   .aside ul li:hover{
     background: rgba(58,190,252,0.5);

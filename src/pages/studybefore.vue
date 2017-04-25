@@ -2,9 +2,9 @@
   <div class="Stydylist">
     <div class="skill">
       <p>你需要具备以下知识</p>
-      <transition name="showIt">
         <div>
-          <ul>
+          <transition name="showIt">
+             <ul>
             <li v-for="(skill, index) in skills">{{index+1}}. {{skill.message}}
               <span>
                 <input type="checkbox" v-model = "skill.ischecked"name="check1" :id="'checked' + index" value=""/>
@@ -13,10 +13,10 @@
               </span>
             </li>
           </ul>
+          </transition>
           <span id="inIt"><input type="search" placeholder="还需要具备：" v-model = "beforeVal" /><button @click = "updata" id="submitIt">提交</button>
           </span>
         </div>
-      </transition>
     </div>
   </div>
 </template>
@@ -48,8 +48,7 @@ export default {
     },
     changeChecked (a) {
       if (!this.skills[a].ischecked) {
-        document.querySelectorAll('.hasit')[a].innerHTML = '具&nbsp&nbsp&nbsp备'
-        console.log(document.querySelectorAll('.hasit')[a])
+        document.querySelectorAll('.hasit')[a].innerHTML = '具备'
       } else {
         document.querySelectorAll('.hasit')[a].innerHTML = '未具备'
       }
@@ -58,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 /*skill部分*/
 .skill{
@@ -147,6 +146,7 @@ export default {
   transition: all .5s;
 }
 .showIt-leave{
+  opacity: 0;
 }
 .showIt-leave-active{
   transition: all .5s;

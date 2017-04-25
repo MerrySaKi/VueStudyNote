@@ -2,19 +2,16 @@
   <div id="app">
     <hder></hder>
     <study-aside></study-aside>
-    <div class="context">
-      <context></context>
-    </div>
+      <router-view class="context"></router-view>
   </div>
 </template>
 
 <script>
 import hder from './components/header'
 import studyAside from './components/studyMenu'
-import context from './pages/studybefore'
 export default {
   name: 'app',
-  components: {hder, studyAside, context},
+  components: {hder, studyAside},
   data () {
     return {
       todayData: '4.20日'
