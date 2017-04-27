@@ -1,11 +1,11 @@
 <template>
   <div class="aside">
     <ul>
-      <li><router-link :to="{path:'/studybefore'}">学习前提</router-link></li>
-      <li><router-link :to="{path:'studyprogress'}">学习进度</router-link></li>
-      <li><router-link :to="{path:'studybook'}">学习资料</router-link></li>
-      <li><router-link :to="{path:'studuvideo'}">实战练习</router-link></li>
-      <li><router-link :to="{path:'studymore'}">更多</router-link></li>
+      <li><router-link :to="'studybefore'">学习前提</router-link></li>
+      <li><router-link :to="'studyprogress'">学习进度</router-link></li>
+      <li><router-link :to="'studybook'">学习资料</router-link></li>
+      <li><router-link :to="'studuvideo'">实战练习</router-link></li>
+      <li><router-link :to="'studymore'">更多</router-link></li>
     </ul>
   </div>
 </template>

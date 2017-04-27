@@ -3,17 +3,15 @@
     <div class="skill">
       <p>你需要具备以下知识</p>
         <div>
-          <transition name="showIt">
-             <ul>
-            <li v-for="(skill, index) in skills">{{index+1}}. {{skill.message}}
-              <span>
-                <input type="checkbox" v-model = "skill.ischecked"name="check1" :id="'checked' + index" value=""/>
-                <label class="hasit" :class="{ischecked:skill.ischecked}" :for="'checked' + index" @click="changeChecked(index)">未具备</label>
-                <span id="dele" @click="removeSkill(index)">删除</span>
-              </span>
-            </li>
+          <ul>
+              <li v-for="(skill, index) in skills"  >{{index+1}}. {{skill.message}}
+                <span>
+                    <input type="checkbox" v-model = "skill.ischecked"name="check1" :id="'checked' + index" value="" />
+                    <label class="hasit" :class="{ischecked:skill.ischecked}" :for="'checked' + index" @click="changeChecked(index)" >未具备</label>
+                  <span id="dele" @click="removeSkill(index)" >删除</span>
+                </span>
+              </li>
           </ul>
-          </transition>
           <span id="inIt"><input type="search" placeholder="还需要具备：" v-model = "beforeVal" /><button @click = "updata" id="submitIt">提交</button>
           </span>
         </div>
@@ -137,19 +135,5 @@ export default {
   margin-left:-1px;
   background: rgba(58,190,252,0.7);
   padding:0 15px;
-}
-
-.showIt-enter{
-  opacity: 0;
-}
-.showIt-enter-active{
-  transition: all .5s;
-}
-.showIt-leave{
-  opacity: 0;
-}
-.showIt-leave-active{
-  transition: all .5s;
-  opacity: 0;
 }
 </style>

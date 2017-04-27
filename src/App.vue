@@ -2,7 +2,10 @@
   <div id="app">
     <hder></hder>
     <study-aside></study-aside>
-      <router-view class="context"></router-view>
+    <transition enter-active-class = "rotateInUpRight" leave-active-class = "rotateOutUpRight">
+      <router-view class="context animated"></router-view>
+    </transition>
+      
   </div>
 </template>
 
@@ -21,6 +24,7 @@ export default {
 </script>
 
 <style>
+  @import url("../resource/css/animate.css");>
 #app {
 }
 *{
@@ -35,5 +39,17 @@ export default {
   width: 90%;
   background: rgba(255,255,255,0.3);
   overflow: auto;
+}
+.fade-enter{
+  opacity: 0;
+}
+.fade-enter-active{
+  transition:all .5s;
+}
+.fade-leave{
+  transition:all .5s;
+}
+.fade-leave-active{
+  opacity: 0;
 }
 </style>

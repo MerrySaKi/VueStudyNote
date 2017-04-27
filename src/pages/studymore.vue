@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    更多
+      练习
   </div>  
 </template>
 
